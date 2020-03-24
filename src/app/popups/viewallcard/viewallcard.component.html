@@ -1,0 +1,30 @@
+ <div class="popup-bg popup-all-cards " *ngIf = "totalRecord && totalRecord.length  > 0">
+    <div class="popup popup-wide">
+        <div class="popup-content">
+            <h3>All KPI’s</h3>
+            <a href="javascript:void(0)" class="close" (click)="forPopupClose()">
+                <img src="assets/images/close-light-icon.svg" alt="">
+            </a>
+        </div>
+        <div class="all-cards">
+           <div class="input-row input-row-wide">
+               <div class="input-wrap">
+                   <span class="input-title">Date</span>  
+                   <div class="dropdown-wrap calendar-light">
+                    <my-date-range-picker name="mydaterange" [options]="myDateRangePickerOptions"
+                    [(ngModel)]="model" required></my-date-range-picker>
+                   </div>
+               </div>
+           </div>
+
+           <ng-scrollbar *ngIf = "totalRecord">
+            <div class="allcard-wrap">
+                <div class="cards-wrapper"  cdkDropList  #todoList="cdkDropList" [cdkDropListData]="totalRecord" (cdkDropListDropped)="drop($event)">
+                    <div class="media-card-wrap" cdkDrag  *ngFor = "let a of totalRecord;let index=index">
+                    </div>
+                </div>
+            </div>
+         </ng-scrollbar>
+        </div>
+    </div>
+</div>

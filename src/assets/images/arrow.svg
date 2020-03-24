@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="18px" viewBox="0 0 10 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <g id="UI_Version-05" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard-Collapsed-View---UX-Benchmarking" transform="translate(-23.000000, -994.000000)" fill="#8C8EA6" fill-rule="nonzero" stroke="#8C8EA6" stroke-width="0.6">
+            <g id="Group-3" transform="translate(0.000000, 983.000000)">
+                <path d="M31.9076995,19.7694498 L24.5740995,12.1027177 C24.4465007,11.9705602 24.2355549,11.9646851 24.1027372,12.0923114 C23.9699195,12.2195939 23.9653568,12.4305335 24.0923306,12.5636598 L31.2052032,19.9999209 L24.0922993,27.4362132 C23.9653256,27.5693395 23.9698883,27.7802791 24.102706,27.9075616 C24.1671772,27.9694059 24.250493,28 24.3331838,28 C24.4210935,28 24.5083156,27.9654997 24.5740682,27.897124 L31.9076995,20.2303919 C32.0307668,20.1014844 32.0307668,19.8983574 31.9076995,19.7694498 Z" id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>

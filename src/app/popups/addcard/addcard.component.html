@@ -1,0 +1,170 @@
+<!-- popup add card -->
+<div class="popup-bg d-block">
+    <div class="popup">
+        <div class="popup-content">
+        <h3>Add KPI Score</h3>
+        <form class="form-wrap"  (ngSubmit)="onSubmit($event)">
+           <div class="input-row input-row-wide">
+                <div class="input-wrap">
+                    <span class="input-title">Conditions</span>  
+                    <div class="dropdown-wrap">
+                        <app-form-select-box  [options]="globalService.condition"
+                            [dropDownIdKey]="'condition_id'" [dropdownLabel]="'condition_name'"
+                            [formElementName]="addContact" [controlName]="'condition_select_name'"
+                            [addCurrentSelectedValue]="false"
+                            >
+                        </app-form-select-box>
+                    </div>
+                    <div class="invalid-feedback" *ngIf="isSubmitted && addContact['controls']['condition_select_name'].errors?.required">
+                        <sup>*</sup>Please enter your condition
+                      </div>
+                </div>
+               
+            </div>
+            <div class="input-row input-row-wide">
+                <div class="input-wrap">
+                    <span class="input-title">Location</span>  
+                    <div class="dropdown-wrap">
+                        <app-form-select-box [options]="location"
+                            [dropDownIdKey]="'id'" [dropdownLabel]="'list'"
+                            [formElementName]="addContact" [controlName]="'location_select_name'"
+                            [addCurrentSelectedValue]="false"
+                            >
+                        </app-form-select-box>
+                    </div>
+                    <div class="invalid-feedback" *ngIf="isSubmitted && addContact['controls']['location_select_name'].errors?.required">
+                        <sup>*</sup>Please enter your Location
+                      </div>
+                </div>
+                <div class="input-wrap">
+                    <span class="input-title">Speed</span>  
+                    <div class="dropdown-wrap">
+                        <app-form-select-box [options]="networktag"
+                            [dropDownIdKey]="'id'" [dropdownLabel]="'list'"
+                            [formElementName]="addContact" [controlName]="'networkSpeed_select_name'"
+                            [addCurrentSelectedValue]="false"
+                            >
+                        </app-form-select-box>
+                    </div>
+                    <div class="invalid-feedback" *ngIf="isSubmitted && addContact['controls']['networkSpeed_select_name'].errors?.required">
+                        <sup>*</sup>Please enter your network speed
+                      </div>
+                </div>
+                
+            </div>
+
+
+
+           
+            <div class="input-row input-row-wide">
+                <div class="input-wrap">
+                    
+                    <span class="input-title">From Date</span>  
+                        <span class="calendar-icon"></span>
+                        <div class="datepicker-container">
+                            <ng-datepicker [(ngModel)]="date" name="date" [options]="options"></ng-datepicker>
+                          </div>
+                </div>
+                <div class="input-wrap">
+                    <span class="calendar-icon"></span>
+                    <span class="input-title">To Date</span>  
+                    <div class="datepicker-container">
+                        <ng-datepicker [(ngModel)]="date" name="date" [options]="options"></ng-datepicker>
+                      </div>
+                </div>
+            </div>
+              <div class="input-row input-row-wide">
+                <div class="input-wrap">
+                    <span class="input-title">Time window</span>  
+                    <div class="dropdown-wrap">
+                      <app-form-select-box  [options]="globalService.timeWindow"
+                            [dropDownIdKey]="'timeWindow_id'" [dropdownLabel]="'timeWindowName'"
+                            [formElementName]="addContact" [controlName]="'timeWindow_select_name'"
+                            [addCurrentSelectedValue]="false"
+                            >
+                        </app-form-select-box>
+                    </div>
+                    <div class="invalid-feedback" *ngIf="isSubmitted && addContact['controls']['timeWindow_select_name'].errors?.required">
+                        <sup>*</sup>Please enter your Time window
+                      </div>
+                </div>
+                <div class="input-wrap">
+                    <span class="input-title">Device Category</span>  
+                    <div class="dropdown-wrap">
+                        <app-form-select-box  [options]="globalService.deviceCategory"
+                            [dropDownIdKey]="'deviceCategory_id'" [dropdownLabel]="'deviceCategory'"
+                            [formElementName]="addContact" [controlName]="'deviceCategory_select_name'"
+                            [addCurrentSelectedValue]="false"
+                            >
+                        </app-form-select-box>
+                    </div>
+                    <div class="invalid-feedback" *ngIf="isSubmitted && addContact['controls']['deviceCategory_select_name'].errors?.required">
+                        <sup>*</sup>Please enter your Device Category
+                      </div>
+                </div>
+                
+            </div>
+            <div class="input-row input-row-wide">
+                <div class="input-wrap">
+                    <span class="input-title">Network</span>  
+                    <div class="dropdown-wrap">
+                        <app-form-select-box  [options]="networks"
+                            [dropDownIdKey]="'id'" [dropdownLabel]="'list'"
+                            [formElementName]="addContact" [controlName]="'network_select_name'"
+                            [addCurrentSelectedValue]="false"
+                            >
+                        </app-form-select-box>
+                    </div>
+                    <div class="invalid-feedback" *ngIf="isSubmitted && addContact['controls']['network_select_name'].errors?.required">
+                        <sup>*</sup>Please enter your Network
+                      </div>
+                </div>
+                <div class="input-wrap">
+                    <span class="input-title">Application Version</span>  
+                    <div class="dropdown-wrap">
+                        <app-form-select-box  [options]="app_version"
+                            [dropDownIdKey]="'id'" [dropdownLabel]="'list'"
+                            [formElementName]="addContact" [controlName]="'appVersion_select_name'"
+                            [addCurrentSelectedValue]="false"
+                            >
+                        </app-form-select-box>
+                    </div>
+                    <div class="invalid-feedback" *ngIf="isSubmitted && addContact['controls']['appVersion_select_name'].errors?.required">
+                        <sup>*</sup>Please enter your  Application Version
+                      </div>
+                </div>
+               
+            </div>
+           <div class="input-row input-row-wide"> 
+           
+           
+                <div class="input-wrap input-choice">
+                    <span class="input-title">Stream Type</span>                
+                    <div class="check-bar">								
+                        <div class="check check-radio">
+                            <label class="custom-checkbox">
+                                <input type="radio" name="stream" required>
+                                <em class="checkmark"></em>
+                                <span class="check-text">Live</span>
+                            </label>
+                        </div>
+                        <div class="check check-radio">
+                            <label class="custom-checkbox">
+                                <input type="radio" name="stream" required>
+                                <em class="checkmark"></em>
+                                <span class="check-text">VOD</span>
+                            </label>
+                        </div>								
+                    </div>
+                </div>
+            </div>
+            
+            <div class="popup-links">
+                <button class="btn btn-light" (click)="forPopupClose()">close</button>
+                <button class="btn btn-dark">add score</button>
+            </div>
+        </form>
+        
+    </div>
+    </div>
+ </div>

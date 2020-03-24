@@ -1,0 +1,440 @@
+/* You can add global styles to this file, and also import other style files */
+/* Eric Meyer's Reset */
+@import 'variables';
+@import 'mixins';
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Global Typography */
+*,
+:before,
+:after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: $base-font;
+  font-family: $gotham-book;
+  color: $color-black;
+  line-height: 1.2;
+}
+
+/* Font Face */
+@font-face {
+  font-family: $gotham-book;
+  src: url('assets/fonts/Gotham-Book.woff2') format('woff2'),
+    url('assets/fonts/Gotham-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $gotham-medium;
+  src: url('assets/fonts/Gotham-Medium.woff2') format('woff2'),
+    url('assets/fonts/Gotham-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Global Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-family: $gotham-medium;
+  text-transform: capitalize;
+}
+h2 {
+  font-size: $font-md + 0.2;
+}
+h3{
+  font-size: $font-md + 0.2;
+}
+/* General Text Formatting */
+p {
+  font-size: $base-font;
+}
+
+blockquote,
+cite,
+q,
+var,
+dfn {
+  font-style: italic;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+span{
+  display: inline-block;
+}
+.text-right{
+  text-align: right;
+}
+.text-left{
+  text-align: left;
+}
+.text-center{
+  text-align: center;
+}
+.no-scroll{
+  overflow: hidden;
+}
+/* Global Link style */
+a {
+  color: $color-black;
+  text-decoration: none;
+  outline: none;
+}
+// input styling starts
+.form-control {
+  border: 0;
+  font-family: $gotham-book;
+  font-size: $base-font;
+  color: $input-color;
+  &:focus {
+    outline: 0;
+    box-shadow: 0;
+  }
+}
+
+::placeholder {
+  color: $input-color;
+  opacity: 1;
+}
+
+::-webkit-input-placeholder {
+  color: $input-color;
+}
+
+::-moz-placeholder {
+  color: $input-color;
+}
+
+:-ms-input-placeholder {
+  color: $input-color;
+}
+
+:-moz-placeholder {
+  color: $input-color;
+}
+
+// input styling ends
+
+/* Global button styling */
+.btn-dark{
+  background-color: $hover-text;
+  color: $color-white;  
+  &:hover{
+    background-color: $color-white;
+    color: $hover-text;
+  }
+}
+.btn{
+  padding: 14px 23px;
+  border-radius: 6px;
+  font-size: 1.5rem;
+  border: 1px solid $hover-text;
+  font-family: $gotham-medium;
+  @include transition(all 0.3s);
+  min-width: 139px;
+  display: inline-block;
+  text-align: center;
+  text-transform: capitalize;
+  span{
+    margin-right: 15px;
+  }
+}
+
+.btn-light{
+  color: $hover-text;
+  &:hover{
+    background-color: $hover-text;
+    color: $color-white;
+  }
+}
+.btn-more{
+  font-family: $gotham-medium;
+  font-size: $base-font - 0.1;
+  color: $hover-text;
+  text-transform: capitalize;
+  img{
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+button{
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* Clearfix class*/
+.clearfix:after {
+  clear: both;
+  content: '';
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+.clearfix {
+  display: block;
+}
+
+/* Global style */
+.container {
+  margin: 0 auto;
+}
+.main{
+  padding: 24px 40px 48px;
+  width: 100%;
+}
+/* Header styling starts */
+.header-wrap {
+  background: $color-white;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 6px 26px;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.search-bar{
+  width: 35%;
+  display: flex;
+  align-items: center;
+  span{
+    display: block;
+    img{
+      display: block;
+    }
+  }
+  .form-control{
+    padding: 5px 13px;
+    height: 29px;
+  }
+}
+.header-right{
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.preferences{
+  display: flex;
+  align-items: center;
+  margin-right: 80px;
+  li{
+    color: $color-pink;
+    font-family: $gotham-medium;
+    display: flex;
+    margin-right: 38px;
+    img{
+      margin-left: 5px;
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}
+.profile-details {
+  display: flex;
+  align-items: center;
+  li {
+    text-transform: uppercase;
+    margin-right: 34px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}
+.profile-img {
+  display: inline-block;
+  height: 48px;
+  width: 48px;
+  margin-right: 14px;
+}
+.profile-name{
+  font-family: $gotham-medium;
+  display: block;
+}
+.profile-designation{
+  font-size: $base-font - 0.6;
+  color: $color-grey;
+  display: block;
+}
+.about-profile{
+  position: relative;
+  &:after{
+    @include abs-pos(4px,0,auto,auto);
+    @include after(10px,5px);
+    background: url(assets/images/down-solid-arrow.svg);
+  }
+  
+}
+.profile-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+
+/* Header styling ends */
+// body {
+//   background: url(assets/images/allcards.png) no-repeat center top !important;
+// }
+// .wrapper {
+//   opacity: 0.5;
+// }
+
+.d-block{
+  // display: block !important;
+}

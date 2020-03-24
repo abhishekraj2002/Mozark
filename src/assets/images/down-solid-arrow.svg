@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="6px" viewBox="0 0 10 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
+    <title>menu</title>
+    <desc>Created with Sketch.</desc>
+    <g id="UI_Version-05" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard-Expanded-View---UX-Monitoring" transform="translate(-1350.000000, -49.000000)" fill="#8C8EA6" fill-rule="nonzero">
+            <g id="Group-10" transform="translate(1193.000000, 39.000000)">
+                <g id="menu" transform="translate(157.000000, 10.000000)">
+                    <g id="Dropdown-Top-Nav.-Bar" transform="translate(0.000000, 0.428571)">
+                        <path d="M0.824968663,0.848539197 L4.64150254,4.7741169 C4.83399542,4.97210958 5.15054652,4.97656804 5.3485392,4.78407516 C5.3519052,4.78080266 5.35522495,4.77748291 5.35849746,4.7741169 L9.17503134,0.848539197 C9.36752422,0.650546517 9.36306575,0.333995424 9.16507307,0.141502541 C9.07174198,0.0507639801 8.94670369,-1.80095248e-14 8.81653388,-1.59872116e-14 L1.18346612,-1.59872116e-14 C0.907323748,-1.57144404e-14 0.683466123,0.223857625 0.683466123,0.5 C0.683466123,0.630169808 0.734230103,0.755208106 0.824968663,0.848539197 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

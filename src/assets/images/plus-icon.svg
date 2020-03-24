@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="13px" viewBox="0 0 13 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
+    <title>plus</title>
+    <desc>Created with Sketch.</desc>
+    <g id="UI_Version-05" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard-Expanded-View---UX-Monitoring" transform="translate(-527.000000, -614.000000)" fill="#8C8EA6" fill-rule="nonzero" stroke="#8C8EA6" stroke-width="0.5">
+            <g id="Group-10" transform="translate(310.000000, 596.000000)">
+                <g id="plus" transform="translate(218.000000, 19.000000)">
+                    <g id="Add-Page-Icon">
+                        <path d="M10.541715,5.04168368 L5.95834945,5.04168368 L5.95834945,0.458327067 C5.95834945,0.205197666 5.75315138,0 5.50002148,0 C5.24689159,0 5.04169352,0.205197666 5.04169352,0.458327067 L5.04169352,5.04166219 L0.458327962,5.04166219 C0.205198067,5.04168368 0,5.24688134 0,5.50001074 C0,5.75314014 0.205198067,5.95833781 0.458327962,5.95833781 L5.04167204,5.95833781 L5.04167204,10.5416729 C5.04167204,10.7948023 5.2468701,11 5.5,11 C5.7531299,11 5.95832796,10.7948023 5.95832796,10.5416729 L5.95832796,5.95833781 L10.541672,5.95833781 C10.7948019,5.95833781 11,5.75314014 11,5.50001074 C11,5.24688134 10.7948449,5.04168368 10.541715,5.04168368 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

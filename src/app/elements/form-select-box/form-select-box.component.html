@@ -1,0 +1,30 @@
+<ng-container *ngIf="_controlName">
+    <div ngbDropdown class="form-selectbox-wrap" style="width: 100%;"  [formGroup]="formElementName" >
+
+   <div (click)="triggerDropDown()" id="{{_id}}" class="select-input-wrapper input-control" [class.partial-disable]="!(selectOptions && selectOptions.length>0)">
+        <input autocomplete="false"  [formControlName]="_controlName" *ngIf="_currentSelection && _currentSelection.length>0" [(ngModel)]="_currentSelection"  name="select-input-{{_id}}" readonly id="select-input-{{_id}}" ngbDropdownToggle>
+        <input autocomplete="false"   value="Select" *ngIf="!_currentSelection" name="select-input-{{_id}}"   readonly id="select-input-{{_id}}" ngbDropdownToggle>
+        <span class="down-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="6.975" height="3.971">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M6.812.161a.561.561 0 00-.786 0L3.488 2.649.949.161a.561.561 0 00-.786 0 .543.543 0 000 .775L3.095 3.81a.561.561 0 00.786 0L6.812.935a.541.541 0 000-.774z" />
+            </svg>
+        </span>
+    </div>
+    <div class="tooltip-wrapper">Required Field</div>
+    <div class="cp" id="select-div" ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <div class="cp-dropdown">
+            <div class="cp-dropdown__select" *ngIf="showDropDown && selectOptions && selectOptions.length>0" id="select-options">
+                <ng-scrollbar #scrollable>
+                 <h3 class="cp-dropdown__select-option" id="select-options" *ngFor="let option of selectOptions"
+                        (click)="setCurrentSelection(option)"> 
+                         <span *ngIf="option && option['flag']">
+                            <img src="{{option?.flag}}">
+                        </span> {{option?.name}}</h3>
+                </ng-scrollbar>
+            </div>
+        </div>
+    </div>
+
+</div>
+</ng-container> 

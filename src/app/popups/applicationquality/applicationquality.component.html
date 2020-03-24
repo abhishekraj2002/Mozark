@@ -1,0 +1,202 @@
+<!-- application quality index popup -->
+<div class="popup-bg popup-aqi-index ">
+    <div class="popup">
+        <div class="popup-content">
+        <h3>Application quality index</h3>
+        <a href="javascript:void(0)" class="delete-icon" (click)="deleteCard()">
+            <img src="assets/images/delete -icon.svg" alt="">
+        </a>
+        <form class="form-wrap" (ngSubmit)="onSubmit($event)">
+            <div class="input-row input-row-wide">
+                <div class="input-wrap">
+                    <span class="input-title">Network</span>  
+                    <div class="dropdown-wrap">
+                        <app-form-select-box  [options]="networks"
+                            [dropDownIdKey]="'id'" [dropdownLabel]="'list'"
+                            [formElementName]="addContact" [controlName]="'network_select_name'"
+                            [addCurrentSelectedValue]="false"
+                            >
+                        </app-form-select-box>
+                    </div>
+                    <div class="invalid-feedback" *ngIf="isSubmitted && addContact['controls']['network_select_name'].errors?.required">
+                        <sup>*</sup>Please enter your Device Category
+                      </div>
+                </div>
+                <div class="input-wrap">
+                    <span class="input-title">City</span>  
+                    <div class="dropdown-wrap">
+                        <app-form-select-box [options]="location"
+                        [dropDownIdKey]="'id'" [dropdownLabel]="'list'"
+                        [formElementName]="addContact" [controlName]="'location_select_name'"
+                        [addCurrentSelectedValue]="false"
+                        >
+                    </app-form-select-box>
+                    </div>
+                </div>
+            </div>
+            <div class="input-row input-row-wide">
+                <div class="input-wrap">
+                    <span class="input-title">Speed</span>  
+                    <div class="dropdown-wrap">
+                        <app-form-select-box [options]="networktag"
+                            [dropDownIdKey]="'id'" [dropdownLabel]="'list'"
+                            [formElementName]="addContact" [controlName]="'networkSpeed_select_name'"
+                            [addCurrentSelectedValue]="false"
+                            >
+                        </app-form-select-box>
+                    </div>
+                    <div class="invalid-feedback" *ngIf="isSubmitted && addContact['controls']['networkSpeed_select_name'].errors?.required">
+                        <sup>*</sup>Please enter your network speed
+                      </div>
+                </div>
+                <div class="input-wrap">
+                    <span class="calendar-icon"></span>
+                    <span class="input-title">Date</span>  
+                    <ng-datepicker [(ngModel)]="date" name="date" [options]="options"></ng-datepicker>
+                </div>
+            </div>
+            <div class="input-row input-row-wide">
+                <div class="input-wrap">
+                    <span class="input-title">Device</span>  
+                    <div class="dropdown-wrap">
+                        <app-form-select-box  [options]="globalService.deviceCategory"
+                            [dropDownIdKey]="'deviceCategory_id'" [dropdownLabel]="'deviceCategory'"
+                            [formElementName]="addContact" [controlName]="'deviceCategory_select_name'"
+                            [addCurrentSelectedValue]="false"
+                            >
+                        </app-form-select-box>
+                    </div>
+                    <div class="invalid-feedback" *ngIf="isSubmitted && addContact['controls']['deviceCategory_select_name'].errors?.required">
+                        <sup>*</sup>Please enter your Device Category
+                      </div>
+                </div>
+                <div class="input-wrap">
+                    <span class="input-title">Stream Type</span>  
+                    <div class="dropdown-wrap">
+                        <app-form-select-box [id]="'group_fk'" [options]="organisationOptions"
+                            [dropDownIdKey]="'group_id'" [dropdownLabel]="'group_name'"
+                            [formElementName]="addContact" [controlName]="'group_fk_select_name'"
+                            [addCurrentSelectedValue]="false"
+                            (currentSelectionChange)="changeSelection($event)">
+                        </app-form-select-box>
+                    </div>
+                </div>
+            </div>
+        </form>                
+    </div>
+    <div class="popup-index">                
+        <h3>Application quality index</h3>
+        <div class="aqi-indexing">
+            <div class="index-left">
+                <span class="value">3.9</span>
+                <ul class="feature-list">
+                    <li><span class="feaure-title">Responsiveness</span>
+                        <div class="feature-right">
+                            <span class="feaure-title">2.3</span>
+                            <div class="feature-info">
+                                <span class="info-icon"><img src="assets/images/info-icon.svg" alt=""></span>
+                                <ul class="feature-sublist">
+                                    <li><span>Time to load application</span>
+                                        <strong>3.4</strong>
+                                    </li>
+                                    <li><span>Video start time</span>
+                                        <strong>2.8</strong>
+                                    </li>
+                                    <li><span>Search result time</span>
+                                        <strong>1.9</strong>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><span class="feaure-title">Streaming</span>
+                        <div class="feature-right">
+                            <span class="feaure-title">3.4</span>
+                            <div class="feature-info">
+                                <span class="info-icon"><img src="assets/images/info-icon.svg" alt=""></span>
+                                <ul class="feature-sublist">
+                                    <li><span>Time to load application</span>
+                                        <strong>3.4</strong>
+                                    </li>
+                                    <li><span>Video start time</span>
+                                        <strong>2.8</strong>
+                                    </li>
+                                    <li><span>Search result time</span>
+                                        <strong>1.9</strong>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><span class="feaure-title">Video Subjective</span>
+                        <div class="feature-right">
+                            <span class="feaure-title">2.1</span>
+                            <div class="feature-info">
+                                <span class="info-icon"><img src="assets/images/info-icon.svg" alt=""></span>
+                                <ul class="feature-sublist">
+                                    <li><span>Time to load application</span>
+                                        <strong>3.4</strong>
+                                    </li>
+                                    <li><span>Video start time</span>
+                                        <strong>2.8</strong>
+                                    </li>
+                                    <li><span>Search result time</span>
+                                        <strong>1.9</strong>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><span class="feaure-title">Audio Subjective</span>
+                        <div class="feature-right">
+                            <span class="feaure-title">2.6</span>
+                            <div class="feature-info">
+                                <span class="info-icon"><img src="assets/images/info-icon.svg" alt=""></span>
+                                <ul class="feature-sublist">
+                                    <li><span>Time to load application</span>
+                                        <strong>3.4</strong>
+                                    </li>
+                                    <li><span>Video start time</span>
+                                        <strong>2.8</strong>
+                                    </li>
+                                    <li><span>Search result time</span>
+                                        <strong>1.9</strong>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><span class="feaure-title">Functional</span>
+                        <div class="feature-right">
+                            <span class="feaure-title">1.1</span>
+                            <div class="feature-info">
+                                <span class="info-icon"><img src="assets/images/info-icon.svg" alt=""></span>
+                                <ul class="feature-sublist">
+                                    <li><span>Time to load application</span>
+                                        <strong>3.4</strong>
+                                    </li>
+                                    <li><span>Video start time</span>
+                                        <strong>2.8</strong>
+                                    </li>
+                                    <li><span>Search result time</span>
+                                        <strong>1.9</strong>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="index-right">
+                <div class="score-graph">
+                    <app-bargraph></app-bargraph>
+                </div>
+            </div>
+        </div>
+            <div class="popup-links text-right">
+                <button class="btn btn-light" (click)="forPopupClose()">close</button>
+                <button class="btn btn-dark">add score</button>
+            </div>
+        </div>
+    </div>
+ </div>

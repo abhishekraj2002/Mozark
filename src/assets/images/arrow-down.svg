@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="9px" viewBox="0 0 15 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <g id="UI_Version-05" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Adding-Scores" transform="translate(-682.000000, -228.000000)" fill="#8C8EA6" fill-rule="nonzero" stroke="#8C8EA6" stroke-width="0.6">
+            <g id="Group-6" transform="translate(328.000000, 75.000000)">
+                <g id="Group-4" transform="translate(48.000000, 116.000000)">
+                    <path d="M316.919237,41.3733768 L310.502337,35.0842606 C310.390688,34.9758502 310.206111,34.9710308 310.089895,35.0757242 C309.97368,35.1801356 309.969687,35.353172 310.080789,35.4623772 L316.304553,41.5624351 L310.080762,47.6625186 C309.96966,47.7717238 309.973652,47.9447602 310.089868,48.0491716 C310.14628,48.0999033 310.219181,48.125 310.291536,48.125 C310.368457,48.125 310.444776,48.0966989 310.50231,48.0406095 L316.919237,41.7514933 C317.026921,41.6457489 317.026921,41.4791213 316.919237,41.3733768 Z" id="Path" transform="translate(313.500000, 41.562500) scale(-1, 1) rotate(90.000000) translate(-313.500000, -41.562500) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

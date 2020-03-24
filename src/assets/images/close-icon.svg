@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
+    <title>Close Icon Add Graph</title>
+    <desc>Created with Sketch.</desc>
+    <g id="UI_Version-05" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard-Expanded-View---UX-Monitoring" transform="translate(-473.000000, -609.000000)">
+            <g id="Group-10" transform="translate(310.000000, 596.000000)">
+                <g id="Close-Icon-Add-Graph" transform="translate(163.000000, 13.000000)">
+                    <circle id="Oval" fill="#EFEFF0" fill-rule="evenodd" cx="11.5" cy="11.5" r="11.5"></circle>
+                    <path d="M14.4167134,15 C14.2674259,15 14.1181384,14.9430513 14.0042413,14.8290293 L8.17093914,8.99571417 C7.94302029,8.76779481 7.94302029,8.39868754 8.17093914,8.17089279 C8.39873338,7.94309804 8.76796443,7.94297344 8.99575868,8.17089279 L14.8290609,14.0042079 C15.0569797,14.2321273 15.0569797,14.6012346 14.8290609,14.8290293 C14.7151637,14.9430513 14.5660009,15 14.4167134,15 L14.4167134,15 Z" id="Path" fill="#8C8EA6" fill-rule="nonzero"></path>
+                    <path d="M8.58329048,15 C8.43400203,15 8.28483818,14.9430517 8.17094028,14.8290305 C7.94301991,14.6012372 7.94301991,14.2320078 8.17094028,14.0042146 L14.0042814,8.17093838 C14.2322018,7.94302054 14.6013107,7.94302054 14.8291064,8.17093838 C15.0569022,8.39873161 15.0570268,8.76796101 14.8291064,8.99575425 L8.99576532,14.8290305 C8.88186746,14.9430517 8.73257897,15 8.58329048,15 L8.58329048,15 Z" id="Path" fill="#8C8EA6" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

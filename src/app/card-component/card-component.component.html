@@ -1,0 +1,32 @@
+<div class="media-card">
+    <span class="drag-icon">
+        <img src="assets/images/drag-icon.svg" alt="">
+    </span>
+    <div class="card-top">
+        <div class="card-head">
+            <span class="subproduct-title">Application</span>
+            <span class="subproduct-title">Quality Index</span>
+            <a href="javascript:void(0)" class="info-link" (click)="forPopupOpen(index)"><img src="assets/images/info-icon.svg" alt="info"></a>
+          
+ <app-applicationquality *ngIf ="currentPopUp && currentPopUp == index" (closePopEvent) = "closePopUp()">
+ </app-applicationquality>
+            <span class="feature-subtitle">aqi</span>
+        </div>    
+        <div class="card-graph">
+            <app-gauge [listData]="listData" [index]="index"></app-gauge>
+        </div>
+    </div>
+    <div class="card-bottom">
+        <ul class="date-list">
+            <li><div class="list-icons"><img src="assets/images/calendar.svg" alt=""></div><span>01 - 21 Sept 2020</span></li>
+            <li><div class="list-icons"><img src="assets/images/internet.svg" alt=""></div><span>2 - 5 mbps</span></li>
+        </ul>
+    </div>  
+    <ul class="feature-listing">
+        <li><span class="feature-title">Responsiveness</span><span class="feature-title">2.1</span></li>
+        <li><span class="feature-title">Streaming</span><span class="feature-title">4.2</span></li>
+        <li><span class="feature-title">Video Subjective</span><span class="feature-title">3.5</span></li>
+        <li><span class="feature-title">Audio Subjective</span><span class="feature-title">5</span></li>
+        <li><span class="feature-title">Functional</span><span class="feature-title">3.3</span></li>
+    </ul>  
+</div>

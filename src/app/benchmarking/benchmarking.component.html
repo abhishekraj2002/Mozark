@@ -1,0 +1,52 @@
+<ngx-ui-loader></ngx-ui-loader>
+
+<div class="page-wrapper">
+  <app-sidebar-component></app-sidebar-component>
+  <main class="main">
+    <app-header></app-header>
+    <div class="monitoring-wrap">
+      <div class="monitoring-head">
+        <h2>YouTube</h2>
+        <a href="javascript:void(0)" (click)="forPopupOpen('addCard')" class="btn btn-dark btn-add"><span>+</span> Add Card</a>
+          <app-addcard *ngIf ="cardType && (globalService.showPopUp==cardType['addCard'])" (valueChange) = "valueChangeEvent($event)"> </app-addcard>
+      </div>
+        <div class="cards-wrapper"  >
+          <div class="media-card-wrap" *ngFor = "let list of cardData; index as i;">
+              <ng-container>
+            <app-card-component [listData]="list" [index]="i+1"></app-card-component>
+            </ng-container>
+          </div>
+        <a href="javascript:void(0)" class="btn-more" (click)="forPopupOpen('viewMore')">view more <img src="assets/images/arrow.svg" alt=""></a>
+            <app-viewallcard  *ngIf ="cardType && (globalService.showPopUp==cardType['viewMore'])" ></app-viewallcard>
+      </div>
+    </div>
+    <div class="page-wrap">
+      <div class="page-head">
+        
+        <ng-container *ngFor="let content of containers; let i  = index;">
+
+          <div class="current-page" [ngClass]="{'current' :(i==isCurrentTab)}" (click)="showCurrenttab(i)">
+            <span class="page-count">Page {{i+1}}</span>
+            <a href="javascript:void(0)" (click)="close(i)" class="close"><img src="assets/images/close-icon.svg"
+                alt=""></a>
+          </div>
+        </ng-container>
+        <a href="javascript:void(0)" class="add-page" (click)="addNewPage()">
+          <img src="assets/images/plus-icon.svg" alt="">
+        </a>
+
+      </div>
+      <ng-container *ngFor="let content of containers; let i  = index;">
+        <div class="page-frame-wrap" *ngIf="(i==isCurrentTab)" [ngClass]="{'current' :(i==isCurrentTab)}" >
+          <div class="page-frame">
+            <app-bargraph ></app-bargraph>
+            <div class="addgraph-link" [ngClass]="{'current' :(i==isCurrentTab)}">
+              <a href="javascript:void(0)" (click)="forPopupOpen('addGraph')" class="btn btn-light">Add Graph</a>
+              <app-addgraph *ngIf ="cardType && (globalService.showPopUp==cardType['addGraph'])"></app-addgraph>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </main>
+</div>

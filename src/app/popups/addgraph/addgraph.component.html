@@ -1,0 +1,227 @@
+ <!-- add graph popup popup -->
+ <div class="popup-bg add-graph-popup d-block">
+    <div class="popup">
+       <div class="popup-content">
+           <h3>Add a Graph</h3>
+       </div>
+       <form class="add-graph-form">
+           <div class="add-listing">
+               <div class="add-detail-left">
+                   <div class="step-count">
+                       <span>Step 01</span>
+                   </div>
+                   <div class="type-text">
+                       <span>Create widget for</span><em> *</em>
+                   </div>
+               </div>
+               <div class="add-detail-right">
+                   <div class="add-checks">
+                       <div class="check check-radio radio-btn">
+                           <label class="custom-checkbox">
+                               <input type="radio" name="for" required>
+                               <em class="checkmark"><span class="check-text">App</span></em>
+                           </label>
+                       </div>
+                       <div class="check check-radio radio-btn">
+                           <label class="custom-checkbox">
+                               <input type="radio" name="for" required>
+                               <em class="checkmark"><span class="check-text">Telco</span></em>
+                           </label>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <div class="add-listing">
+               <div class="add-detail-left">
+                   <div class="step-count">
+                       <span>Step 02</span>
+                   </div>
+                   <div class="type-text">
+                       <span>Select a widget type</span><em> *</em>
+                   </div>
+               </div>
+               <div class="add-detail-right">
+                   <div class="add-checks">
+                       <div class="check check-radio radio-btn">
+                           <label class="custom-checkbox">
+                               <input type="radio" name="Type" required>
+                               <em class="checkmark"><span class="check-text">Timeseries</span></em>
+                           </label>
+                       </div>
+                       <div class="check check-radio radio-btn">
+                           <label class="custom-checkbox">
+                               <input type="radio" name="Type" required>
+                               <em class="checkmark"><span class="check-text">Compare</span></em>
+                           </label>
+                       </div>
+                       <div class="check check-radio radio-btn">
+                           <label class="custom-checkbox">
+                               <input type="radio" name="Type" required>
+                               <em class="checkmark"><span class="check-text">Histogram</span></em>
+                           </label>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <div class="add-listing">
+               <div class="add-detail-left">
+                   <div class="step-count">
+                       <span>Step 03</span>
+                   </div>
+                   <div class="type-text">
+                       <span>Choose KPI</span><em> *</em>
+                   </div>
+               </div>
+               <div class="add-detail-right">
+               <div class="input-row">
+                   <div class="input-wrap">
+                       <div class="dropdown-wrap">
+                           <app-form-select-box [id]="'condition_fk'" [options]="globalService.chooseKPI"
+                               [dropDownIdKey]="'condition_id'" [dropdownLabel]="'condition_name'"
+                               [formElementName]="addContact" [controlName]="'condition_select_name'"
+                               [addCurrentSelectedValue]="false"
+                               (currentSelectionChange)="changeSelection($event)">
+                           </app-form-select-box>
+                       </div>
+                       <a href="javascript:void(0)" class="info-icon"><img src="assets/images/info-icon.svg" alt=""></a>
+                   </div>
+               </div>
+           </div>
+           </div>
+           <div class="add-listing">
+               <div class="add-detail-left">
+                   <div class="step-count">
+                       <span>Step 04</span>
+                   </div>
+                   <div class="type-text">
+                       <span>Choose peers</span>
+                   </div>
+               </div>
+               <div class="add-detail-right">
+                   <div class="input-row">
+                   <div class="input-wrap">
+                       <span class="input-title">Peers</span>  
+                       <div class="dropdown-wrap">
+                           <app-form-select-box [id]="'peer_fk'" [options]="globalService.peers"
+                               [dropDownIdKey]="'Network_id'" [dropdownLabel]="'Network_name'"
+                               [formElementName]="addContact" [controlName]="'network_select_name'"
+                               [addCurrentSelectedValue]="false"
+                               (currentSelectionChange)="changeSelection($event)">
+                           </app-form-select-box>
+                       </div>
+                   </div>
+                   <div class="input-wrap">
+                       <span class="input-title">Date Range</span>  
+                       <!-- <app-calendar (triggerOutput)="triggerOutput()"></app-calendar> -->
+                       <my-date-range-picker name="mydaterange" [options]="myDateRangePickerOptions"
+                    [(ngModel)]="model" required></my-date-range-picker>
+                   </div>
+               </div>
+           </div>
+           </div>
+           <div class="add-listing add-listing-condition">
+               <div class="add-detail-left">
+                   <div class="step-count">
+                       <span>Step 05</span>
+                   </div>
+                   <div class="type-text">
+                       <span>Choose condition</span>
+                   </div>
+               </div>
+               <div class="add-detail-right">
+                   <div class="input-row">
+                       <div class="input-wrap">
+                           <span class="input-title">Speed</span>  
+                           <div class="dropdown-wrap">
+                            <app-form-select-box [id]="'networkSpeed_fk'" [options]="globalService.networkSpeed"
+                            [dropDownIdKey]="'networkSpeed_id'" [dropdownLabel]="'networkSpeed'"
+                            [formElementName]="addContact" [controlName]="'networkSpeed_select_name'"
+                            [addCurrentSelectedValue]="false"
+                            (currentSelectionChange)="changeSelection($event)">
+                        </app-form-select-box>
+                           </div>
+                       </div>
+                       <div class="input-wrap">
+                           <span class="input-title">Location</span>  
+                           <div class="dropdown-wrap">
+                            <app-form-select-box [id]="'location_fk'" [options]="globalService.location"
+                            [dropDownIdKey]="'location_id'" [dropdownLabel]="'location_name'"
+                            [formElementName]="addContact" [controlName]="'location_select_name'"
+                            [addCurrentSelectedValue]="false"
+                            (currentSelectionChange)="changeSelection($event)">
+                        </app-form-select-box>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="input-row">
+                       <div class="input-wrap">
+                           <span class="input-title">Time Window</span>  
+                           <div class="dropdown-wrap">
+                            <app-form-select-box [id]="'timeWindow_fk'" [options]="globalService.timeWindow"
+                            [dropDownIdKey]="'timeWindow_id'" [dropdownLabel]="'timeWindowName'"
+                            [formElementName]="addContact" [controlName]="'timeWindow_select_name'"
+                            [addCurrentSelectedValue]="false"
+                            (currentSelectionChange)="changeSelection($event)">
+                        </app-form-select-box>
+                           </div>
+                       </div>
+                       <div class="input-wrap">
+                           <span class="input-title">Widget Name</span>  
+                           <input type="text" placeholder="mywidget1">
+                       </div>
+                   </div>
+                   <div class="input-row">
+                       <div class="input-wrap">
+                           <span class="input-title">Device Class</span>  
+                           <div class="dropdown-wrap">
+                            <app-form-select-box [id]="'deviceCategory_fk'" [options]="globalService.deviceCategory"
+                            [dropDownIdKey]="'deviceCategory_id'" [dropdownLabel]="'deviceCategory'"
+                            [formElementName]="addContact" [controlName]="'deviceCategory_select_name'"
+                            [addCurrentSelectedValue]="false"
+                            (currentSelectionChange)="changeSelection($event)">
+                        </app-form-select-box>
+                           </div>
+                       </div>
+                       <div class="input-wrap">
+                           <span class="input-title">Device OS</span>  
+                           <div class="dropdown-wrap">
+                               <app-form-select-box [id]="'deviceOs_fk'" [options]="globalService.deviceOs"
+                                   [dropDownIdKey]="'deviceOs_id'" [dropdownLabel]="'deviceOs'"
+                                   [formElementName]="addContact" [controlName]="'deviceCategory_select_os'"
+                                   [addCurrentSelectedValue]="false"
+                                   (currentSelectionChange)="changeSelection($event)">
+                               </app-form-select-box>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="input-row">
+                       <div class="input-wrap input-choice">
+                           <span class="input-title">Stream Type</span>                
+                           <div class="check-bar">								
+                               <div class="check check-radio">
+                                   <label class="custom-checkbox">
+                                       <input type="radio" name="streamType" required>
+                                       <em class="checkmark"></em>
+                                       <span class="check-text">Live</span>
+                                   </label>
+                               </div>
+                               <div class="check check-radio">
+                                   <label class="custom-checkbox">
+                                       <input type="radio" name="streamType" required>
+                                       <em class="checkmark"></em>
+                                       <span class="check-text">VOD</span>
+                                   </label>
+                               </div>								
+                           </div>
+                       </div>
+                   </div>
+                   
+               </div>
+           </div>
+           <div class="popup-links text-right">
+               <button class="btn btn-light" (click)="forPopupClose()">close</button>
+               <button class="btn btn-dark">add score</button>
+           </div>
+       </form>
+    </div>
+</div>

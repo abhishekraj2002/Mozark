@@ -1,0 +1,154 @@
+<!-- edit widget popup -->
+<div class="popup-bg edit-widget-popup d-block">
+    <div class="popup">
+        <div class="popup-content">
+        <h3>Edit widget</h3>
+        <form class="form-wrap">
+            <div class="input-row input-row-wide">
+                <div class="input-wrap">
+                    <span class="input-title">KPI</span>  
+                    <div class="dropdown-wrap">
+                        <app-form-select-box [id]="'group_fk'" [options]="organisationOptions"
+                            [dropDownIdKey]="'group_id'" [dropdownLabel]="'group_name'"
+                            [formElementName]="addContact" [controlName]="'group_fk_select_name'"
+                            [addCurrentSelectedValue]="false"
+                            (currentSelectionChange)="changeSelection($event)">
+                        </app-form-select-box>
+                    </div>
+                </div>
+            </div>
+            <div class="input-row input-row-wide">
+                <div class="input-wrap">
+                    <span class="input-title">From Date</span>  
+                    <div class="dropdown-wrap">
+                        <!-- <app-calendar (triggerOutput)="triggerOutput()"></app-calendar> -->
+                    </div>
+
+                </div>
+                <div class="input-wrap">
+                    <span class="input-title">To Date</span>  
+                    <!-- <app-calendar (triggerOutput)="triggerOutput()"></app-calendar> -->
+                </div>
+            </div>
+            <div class="input-row input-row-wide">
+                <div class="input-wrap">
+                    <span class="input-title">Time window</span>  
+                    <div class="dropdown-wrap">
+                        <app-form-select-box [id]="'group_fk'" [options]="organisationOptions"
+                            [dropDownIdKey]="'group_id'" [dropdownLabel]="'group_name'"
+                            [formElementName]="addContact" [controlName]="'group_fk_select_name'"
+                            [addCurrentSelectedValue]="false"
+                            (currentSelectionChange)="changeSelection($event)">
+                        </app-form-select-box>
+                    </div>
+
+                </div>
+                <div class="input-wrap">
+                    <span class="input-title">Application</span>  
+                    <div class="dropdown-wrap">
+                        <app-form-select-box [id]="'group_fk'" [options]="organisationOptions"
+                            [dropDownIdKey]="'group_id'" [dropdownLabel]="'group_name'"
+                            [formElementName]="addContact" [controlName]="'group_fk_select_name'"
+                            [addCurrentSelectedValue]="false"
+                            (currentSelectionChange)="changeSelection($event)">
+                        </app-form-select-box>
+                    </div>
+                </div>
+            </div>
+            <div class="input-row input-row-wide">
+                <div class="input-wrap">
+                    <span class="input-title">Peers</span>  
+                    <div class="dropdown-wrap">
+                        <app-form-select-box [id]="'group_fk'" [options]="organisationOptions"
+                            [dropDownIdKey]="'group_id'" [dropdownLabel]="'group_name'"
+                            [formElementName]="addContact" [controlName]="'group_fk_select_name'"
+                            [addCurrentSelectedValue]="false"
+                            (currentSelectionChange)="changeSelection($event)">
+                        </app-form-select-box>
+                    </div>
+
+                </div>
+                <div class="input-wrap">
+                    <span class="input-title">Speed</span>  
+                    <div class="dropdown-wrap">
+                        <app-form-select-box [id]="'group_fk'" [options]="organisationOptions"
+                            [dropDownIdKey]="'group_id'" [dropdownLabel]="'group_name'"
+                            [formElementName]="addContact" [controlName]="'group_fk_select_name'"
+                            [addCurrentSelectedValue]="false"
+                            (currentSelectionChange)="changeSelection($event)">
+                        </app-form-select-box>
+                    </div>
+                </div>
+            </div>
+            <div class="input-row input-row-wide">
+                <div class="input-wrap">
+                    <span class="input-title">Device OS</span>  
+                    <div class="dropdown-wrap">
+                        <app-form-select-box [id]="'group_fk'" [options]="organisationOptions"
+                            [dropDownIdKey]="'group_id'" [dropdownLabel]="'group_name'"
+                            [formElementName]="addContact" [controlName]="'group_fk_select_name'"
+                            [addCurrentSelectedValue]="false"
+                            (currentSelectionChange)="changeSelection($event)">
+                        </app-form-select-box>
+                    </div>
+
+                </div>
+                <div class="input-wrap">
+                    <span class="input-title">Location</span>  
+                    <div class="dropdown-wrap">
+                        <app-form-select-box [id]="'group_fk'" [options]="organisationOptions"
+                            [dropDownIdKey]="'group_id'" [dropdownLabel]="'group_name'"
+                            [formElementName]="addContact" [controlName]="'group_fk_select_name'"
+                            [addCurrentSelectedValue]="false"
+                            (currentSelectionChange)="changeSelection($event)">
+                        </app-form-select-box>
+                    </div>
+                </div>
+            </div>
+            <div class="input-row input-row-wide">
+                <div class="input-wrap">
+                    <span class="input-title">Device Class</span>  
+                    <div class="dropdown-wrap">
+                        <app-form-select-box [id]="'group_fk'" [options]="organisationOptions"
+                            [dropDownIdKey]="'group_id'" [dropdownLabel]="'group_name'"
+                            [formElementName]="addContact" [controlName]="'group_fk_select_name'"
+                            [addCurrentSelectedValue]="false"
+                            (currentSelectionChange)="changeSelection($event)">
+                        </app-form-select-box>
+                    </div>
+                </div>
+                <div class="input-wrap">
+                    <span class="input-title">Name</span>  
+                    <input type="text" placeholder="mywidget01">
+                </div>
+            </div>
+            <div class="input-row input-row-wide">
+                <div class="input-wrap input-choice">
+                    <span class="input-title">Stream Type</span>                
+                    <div class="check-bar">								
+                        <div class="check check-radio">
+                            <label class="custom-checkbox">
+                                <input type="radio" name="stream" required>
+                                <em class="checkmark"></em>
+                                <span class="check-text">Live</span>
+                            </label>
+                        </div>
+                        <div class="check check-radio">
+                            <label class="custom-checkbox">
+                                <input type="radio" name="stream" required>
+                                <em class="checkmark"></em>
+                                <span class="check-text">VOD</span>
+                            </label>
+                        </div>								
+                    </div>
+                </div>
+            </div>
+            <div class="popup-links">
+                <button class="btn btn-light"[routerLink] = "['/monitoring']">close</button>
+                <button class="btn btn-dark">add score</button>
+            </div>
+        </form>
+        
+    </div>
+    </div>
+ </div>
